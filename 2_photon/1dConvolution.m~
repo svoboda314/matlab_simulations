@@ -1,0 +1,7 @@
+
+
+
+psf function 
+
+psf=exp(-(x-x_p)^2/(2*s^2));
+

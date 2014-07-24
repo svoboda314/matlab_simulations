@@ -1,0 +1,16 @@
+
+f1=rand(1000,1);
+f2=rand(1000,1);
+
+t1=0.8;
+t2=0.90;
+
+f1(find(f1>t1))=1;
+f2(find(f2>t2))=1;
+f1=fix(f1);
+%sum(f1)
+f2=fix(f2);
+%sum(f2)
+plot(f1, 'ro');
+plot(f2, 'go');
+

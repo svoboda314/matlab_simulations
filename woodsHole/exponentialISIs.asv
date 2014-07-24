@@ -1,0 +1,16 @@
+
+nTrials=100;
+stimPerTrial=7;
+
+% compute ISIs
+meanISI=1;
+minISI=0.030;
+isi = random('exp',meanISI, 1,1000);
+isi=isi(find(isi > minISI));
+hist(isi, 0:0.01:10)
+
+stimTimes=zeros(nTrials, stimPerTrial);
+for i=1:nTrials
+    stimTimes(i, :)=cumsum(isi(((i-1)*stimPerTrial+1):i*stimPerTrial))-isi((i-1)*stimPerTrial+1);
+    
+end    

@@ -1,0 +1,11 @@
+function out=iniVPMspikesReg
+
+global net sim
+spike_rate=20;
+
+nn=round(spike_rate/sim.tstep);
+st=nn:nn:sim.tsteps;
+
+net.vpm.spikes(:, st)=1;
+
+out=1;

@@ -1,0 +1,16 @@
+
+
+x=fminsearch(@funcToMinimize, [0.1 1 0.1]
+
+
+
+
+% target pole location
+a = [0.01, 0.05]
+
+% initial parameters
+contourLoc=0.01;
+f=1/300;
+hf=@bengingRods3;
+
+x = fminsearch(hf,[contourLoc,f])
